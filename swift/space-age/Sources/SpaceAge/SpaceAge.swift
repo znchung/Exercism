@@ -1,20 +1,30 @@
+import Foundation 
+
 class SpaceAge {
 
-    let seconds: Double
-    lazy var onEarth: Double    = ageOnPlanet(1)
-    lazy var onMercury: Double  = ageOnPlanet(0.2408467)
-    lazy var onJupiter: Double  = ageOnPlanet(11.862615)
-    lazy var onMars: Double     = ageOnPlanet(1.8808158)
-    lazy var onVenus: Double    = ageOnPlanet(0.61519726)
-    lazy var onSaturn: Double   = ageOnPlanet(29.447498)
-    lazy var onUranus: Double   = ageOnPlanet(84.016846)
-    lazy var onNeptune: Double  = ageOnPlanet(164.79132)
+    let seconds: TimeInterval!
+    var onEarth: TimeInterval!
+    var onMercury: TimeInterval!
+    var onJupiter: TimeInterval!  
+    var onMars: TimeInterval! 
+    var onVenus: TimeInterval!    
+    var onSaturn: TimeInterval!  
+    var onUranus: TimeInterval! 
+    var onNeptune: TimeInterval!
 
-    init(_ ageInSeconds: Double) {
+    init(_ ageInSeconds: TimeInterval) {
         seconds = ageInSeconds
+        onEarth    = ageOnPlanet(withPeriod: 1)
+        onMercury  = ageOnPlanet(withPeriod: 0.2408467)
+        onJupiter  = ageOnPlanet(withPeriod: 11.862615)
+        onMars     = ageOnPlanet(withPeriod: 1.8808158)
+        onVenus    = ageOnPlanet(withPeriod: 0.61519726)
+        onSaturn   = ageOnPlanet(withPeriod: 29.447498)
+        onUranus   = ageOnPlanet(withPeriod: 84.016846)
+        onNeptune  = ageOnPlanet(withPeriod: 164.79132)
     }
 
-    private func ageOnPlanet(_ period: Double) -> Double {
-        return seconds / period / 31557600
+    private func ageOnPlanet(withPeriod: TimeInterval) -> TimeInterval {
+        return seconds / withPeriod / 31557600
     }
 }
