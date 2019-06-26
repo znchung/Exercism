@@ -1,2 +1,5 @@
 *.vscode
 /javascript/*/node_modules/
+/kotlin/*/build/
+/kotlin/*/gradle/
+/kotlin/*/.gradle/
