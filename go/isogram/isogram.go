@@ -1,29 +1,22 @@
 package isogram
 
 import (
-	"log"
-	"regexp"
-	"strings"
+	"unicode"
 )
 
 // IsIsogram returns true if the input given has unique characters
 func IsIsogram(input string) bool {
 
-	s := strings.ToLower(input)
-	reg, err := regexp.Compile("[^a-z]+")
+	mapSet := make(map[rune]bool)
 
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	s = reg.ReplaceAllString(s, "")
-	mapSet := make(map[string]int)
-
-	for _, v := range s {
-		if mapSet[string(v)] == 1 {
-			return false
+	for _, v := range input {
+		if unicode.IsLetter(v) {
+			s := unicode.ToLower(v)
+			if mapSet[s] {
+				return false
+			}
+			mapSet[s] = true
 		}
-		mapSet[string(v)]++
 	}
 	return true
 }
