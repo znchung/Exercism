@@ -3,7 +3,7 @@ class Acronym
         strArray = str.split
 
         return strArray.map { |i| 
-            i.split("-").map { |j| j[0] }
+            i.scan(/\b\w/)
         }.join("").upcase
     end
 end
