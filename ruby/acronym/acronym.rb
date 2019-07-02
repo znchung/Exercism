@@ -1,9 +1,6 @@
 class Acronym
-    def self.abbreviate(str)
-        strArray = str.split
+  def self.abbreviate(str)
 
-        return strArray.map { |i| 
-            i.scan(/\b\w/)
-        }.join("").upcase
-    end
+    return str.scan(/\b\w/).join.upcase
+  end
 end
