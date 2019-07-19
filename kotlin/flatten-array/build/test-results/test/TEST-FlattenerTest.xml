@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FlattenerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-06-06T22:38:18" hostname="C02V714DHTD7" time="0.037">
+<testsuite name="FlattenerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-07-18T02:35:50" hostname="C02V714DHTD7" time="0.027">
   <properties/>
-  <testcase name="flattens6LevelNestedList" classname="FlattenerTest" time="0.035"/>
-  <testcase name="allNullNestedListReturnsEmptyList" classname="FlattenerTest" time="0.0"/>
+  <testcase name="flattens6LevelNestedList" classname="FlattenerTest" time="0.024"/>
+  <testcase name="allNullNestedListReturnsEmptyList" classname="FlattenerTest" time="0.001"/>
   <testcase name="flattens5LevelNestedList" classname="FlattenerTest" time="0.0"/>
   <testcase name="flatListIsUnchanged" classname="FlattenerTest" time="0.0"/>
   <testcase name="flattens2LevelNestedList" classname="FlattenerTest" time="0.0"/>
