@@ -2,4 +2,11 @@
 /javascript/*/node_modules/
 /kotlin/*/build/
 /kotlin/*/gradle/
+/kotlin/*/gradlew
 /kotlin/*/.gradle/
+*.classpath
+*.exercism
+*.project
+*.settings
+/kotlin/*/bin/
+
