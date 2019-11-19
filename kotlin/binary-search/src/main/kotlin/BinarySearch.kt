@@ -1,21 +1,17 @@
 class BinarySearch {
     companion object {
         fun search(list: List<Int>, num: Int): Int {
-            var result = -1
+            val NOT_FOUND = -1
 
             if (list.isEmpty()) {
-                return result
+                return NOT_FOUND
             }
 
             var range = 0..list.lastIndex
-            var mid: Int
 
             while (!range.isEmpty()) {
-                mid = (range.start + range.endInclusive) / 2
-
-                if (range.count() == 1 && list[mid] != num) {
-                    return -1
-                }
+                val mid = (range.start + range.endInclusive) / 2
+                
                 when {
                     list[mid] == num -> return mid
                     num < list[mid] -> { range = range.start until mid }
@@ -23,7 +19,7 @@ class BinarySearch {
                 }
             }
 
-            return result
+            return NOT_FOUND
         }
     }
 }
