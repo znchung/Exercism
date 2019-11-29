@@ -11,7 +11,7 @@ class BinarySearch {
 
             while (!range.isEmpty()) {
                 val mid = (range.start + range.endInclusive) / 2
-                
+
                 when {
                     list[mid] == num -> return mid
                     num < list[mid] -> { range = range.start until mid }

@@ -8,6 +8,7 @@ import (
 
 var nameSet = make(map[string]bool)
 
+// Robot has a property named `name`
 type Robot struct {
 	name string
 }
@@ -17,6 +18,7 @@ func generateName() string {
 	return letter() + letter() + number()
 }
 
+// Name returns the name of the robot and throws an error if it is not a valid name
 func (r *Robot) Name() (string, error) {
 	for inUse, ok := r.name == "", true; ok && inUse; inUse, ok = nameSet[r.name] {
 		r.name = generateName()
@@ -25,6 +27,7 @@ func (r *Robot) Name() (string, error) {
 	return r.name, nil
 }
 
+// Reset resets the name to an empty string
 func (r *Robot) Reset() {
 	r.name = ""
 }
